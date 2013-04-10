@@ -1,8 +1,7 @@
 var express = require("express");
 var app = express()
   , http = require('http')
-  , server = http.createServer(app)
-  , io = require('socket.io').listen(server);
+  , server = http.createServer(app);
     
 app.configure(function(){
   app.use(express.methodOverride());
@@ -19,11 +18,11 @@ app.get("/", function(req, res) {
   res.redirect("index.html");
 });
 
-server.listen(80);
+server.listen(8080);
 
 //================================================================================
 
-//var io = require('socket.io').listen(app);
+var io = require('socket.io').listen(5050);
 var gamejs = new require('./common/game.js');
 var level = new require('./level.js');
 

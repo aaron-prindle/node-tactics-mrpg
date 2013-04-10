@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Globals
-//socket = io.connect('http://o.smus.com:5050');
-socket = io.connect('http://aaronprindle.osmus.jit.su:80');
+socket = io.connect('http://localhost:5050');
 game = new Game();
 playerId = null;
 totalSkew = 0;
